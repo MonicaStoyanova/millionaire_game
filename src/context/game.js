@@ -14,19 +14,29 @@ export const GameProvider = ({ children }) => {
   //where is the player on the ladder of questions
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  const startGame = () => {
-    setGameStage("chooseCategory");
+  const currentGameStage = (stage) => {
+    setGameStage(stage);
   };
 
   const nextQuestion = () => {
     setCurrentQuestionIndex(currentQuestionIndex + 1);
   };
+
+  const checkAnswer = (answer, correctAsnwer) => {
+    if (answer === correctAsnwer) {
+      nextQuestion();
+    } else {
+      currentGameStage("gameOver");
+    }
+  };
   // need to check if its the last question
 
   const valueToShare = {
     gameStage,
-    startGame,
+    currentGameStage,
     nextQuestion,
+    currentQuestionIndex,
+    checkAnswer,
   };
 
   return (

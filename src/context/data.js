@@ -24,7 +24,7 @@ function Provider({ children }) {
         category
       )}&difficulty=${difficulty.toLowerCase()}&type=multiple`
     );
-    setQuestions(response.data);
+    setQuestions(response.data.results);
   }, []);
 
   useEffect(() => {

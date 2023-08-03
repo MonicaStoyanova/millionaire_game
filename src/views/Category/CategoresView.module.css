@@ -8,3 +8,8 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.StartGameButton {
+  width: 70%;
+  margin-top: 20px;
+}

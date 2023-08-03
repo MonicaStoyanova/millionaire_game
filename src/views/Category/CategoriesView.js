@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import dataContext from "../../context/data";
+import Button from "../../components/Button/Button";
 
 import styles from "./CategoresView.module.css";
+import GameContext from "../../context/game";
 
 const options = [
   {
@@ -21,11 +23,13 @@ const options = [
 
 const CategoriesView = () => {
   const value = useContext(dataContext);
+  const gameContextValue = useContext(GameContext);
   //as defaults: cat.num 9 and diff. easy, if the player just clicks on start they are ready
   const [currentCategory, setcurrentCategory] = useState("9");
   const [difficulty, setDifficulty] = useState("easy");
 
   const { category, getQuestions } = value;
+  const { currentGameStage } = gameContextValue;
 
   const onSelectedCategoryHandler = (e) => {
     setcurrentCategory(e.target.value);
@@ -41,6 +45,10 @@ const CategoriesView = () => {
     }
   }, [currentCategory, difficulty]);
 
+  const startGameStageHandler = () => {
+    currentGameStage("playing");
+  };
+
   return (
     <div className={styles.Dropdown}>
       <Dropdown
@@ -54,7 +62,9 @@ const CategoriesView = () => {
         heading="Difficulty"
         onChange={onSelectedDifficultyHandler}
       />
-      {/* <Button>Difficulty</Button> */}
+      <div className={styles.StartGameButton}>
+        <Button clickHandler={startGameStageHandler}>Start Game</Button>
+      </div>
     </div>
   );
 };

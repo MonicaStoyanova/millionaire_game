@@ -12,7 +12,9 @@ const Homeview = ({ startGame }) => {
       </figure>
 
       <div className="btn">
-        <Button clickHandler={startGame}>Start Game</Button>
+        <Button clickHandler={() => startGame("chooseCategory")}>
+          Start Game
+        </Button>
       </div>
     </div>
   );

@@ -1,0 +1,13 @@
+.startGameBtn {
+  border-radius: 35px;
+  background-color: rgb(42, 41, 41);
+  color: white;
+  font-size: 20px;
+  padding: 16px 14px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}

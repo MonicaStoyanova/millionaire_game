@@ -50,7 +50,7 @@ const CategoriesView = () => {
   };
 
   return (
-    <div className={styles.Dropdown}>
+    <div className={styles.dropdown}>
       <Dropdown
         options={category}
         heading="Category"
@@ -62,7 +62,7 @@ const CategoriesView = () => {
         heading="Difficulty"
         onChange={onSelectedDifficultyHandler}
       />
-      <div className={styles.StartGameButton}>
+      <div className={styles.startGameButton}>
         <Button clickHandler={startGameStageHandler}>Start Game</Button>
       </div>
     </div>

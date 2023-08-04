@@ -10,7 +10,7 @@
 .nextBtn {
 }
 
-.PlayView {
+.playView {
   display: flex;
   position: relative;
   justify-content: center;

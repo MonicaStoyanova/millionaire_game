@@ -26,7 +26,7 @@ const PlayView = () => {
 
   return (
     <>
-      <div className={styles.PlayView}>
+      <div className={styles.playView}>
         <Timer />
         <Question
           question={question}

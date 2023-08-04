@@ -20,7 +20,7 @@ const AnswerItem = ({ answer, index, correctAnswer }) => {
 
 const Answers = ({ shuffledAnswers, correctAnswer }) => {
   return (
-    <div className={styles.AnswersContainer}>
+    <div className={styles.answersContainer}>
       {shuffledAnswers.map((a, i) => (
         <AnswerItem
           key={a}

@@ -5,12 +5,19 @@ import GameContext from "../../context/game";
 const AnswerItem = ({ answer, index, correctAnswer }) => {
   const letters = ["A", "B", "C", "D"];
 
-  const { checkAnswer } = useContext(GameContext);
+  const { setCurrentAnswer, currentGameStage } = useContext(GameContext);
+
+  const isCorrectAnswer = (answer) => {
+    if (!(correctAnswer === answer)) {
+      currentGameStage("gameOver");
+    }
+    setCurrentAnswer(answer);
+  };
 
   return (
     <button
       className={styles.answerOptions}
-      onClick={() => checkAnswer(answer, correctAnswer)}
+      onClick={() => isCorrectAnswer(answer)}
     >
       <span>{letters[index]}: </span>
       {answer}

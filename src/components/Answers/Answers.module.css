@@ -25,3 +25,9 @@
 .answerOptions span {
   margin-right: 5px;
 }
+
+@media screen and (max-width: 800px) {
+  .answersContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -16,3 +16,10 @@
   color: white;
   font-size: 20px;
 }
+
+@media screen and (max-width: 800px) {
+  .timer {
+    top: 10px;
+    left: 40px;
+  }
+}

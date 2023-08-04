@@ -30,6 +30,7 @@ function App() {
       )}
       {gameStage === "playing" && <PlayView />}
       {gameStage === "gameOver" && <EndView />}
+      {gameStage === "won" && <EndView />}
     </main>
   );
 }

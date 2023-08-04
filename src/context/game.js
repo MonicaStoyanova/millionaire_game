@@ -13,8 +13,12 @@ export const GameProvider = ({ children }) => {
   const [gameStage, setGameStage] = useState("startGame");
   //where is the player on the ladder of questions
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentAnswer, setCurrentAnswer] = useState("");
 
   const currentGameStage = (stage) => {
+    if (stage === "startGame") {
+      setCurrentQuestionIndex(0);
+    }
     setGameStage(stage);
   };
 
@@ -37,6 +41,8 @@ export const GameProvider = ({ children }) => {
     nextQuestion,
     currentQuestionIndex,
     checkAnswer,
+    setCurrentAnswer,
+    currentAnswer,
   };
 
   return (

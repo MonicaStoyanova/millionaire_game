@@ -25,6 +25,14 @@ function Provider({ children }) {
       )}&difficulty=${difficulty.toLowerCase()}&type=multiple`
     );
     setQuestions(response.data.results);
+    /* if (
+      response.data.results.questions === undefined ||
+      response.data.results == []
+    ) {
+      console.log("Please choose another category");
+    } else {
+      setQuestions(response.data.results);
+    }*/
   }, []);
 
   useEffect(() => {

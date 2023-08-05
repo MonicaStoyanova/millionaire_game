@@ -8,9 +8,6 @@
   background-color: rgb(239, 3, 3);
 }
 
-.nextBtn {
-}
-
 .playView {
   display: flex;
   position: relative;
@@ -20,9 +17,4 @@
   flex-direction: column;
   overflow: hidden;
   padding: 0px 50px;
-}
-
-@media screen and (max-width: 800px) {
-  .playView {
-  }
 }

@@ -1,0 +1,7 @@
+1. Sound can not be stopped
+2. Some of the fetched questions appear like that
+Which element has the chemical symbol &#039;Fe&#039;? science and nature category was that
+3. Answers do not blink in green/red
+4. Joker options missing
+5. When you click ot the correct answer and next button appears, the answers get randomized again(React.memo?)
+6. Responsivness

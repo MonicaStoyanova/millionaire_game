@@ -1,12 +1,10 @@
-import sound from "../assets/sound.mp3";
+import sound from "../../assets/sound.mp3";
 
-import icon from "../assets/icon.png";
-import muted from "../assets/muted.png";
-
-import useSound from "use-sound";
+import icon from "../../assets/icon.png";
+import muted from "../../assets/muted.png";
 
 import styles from "./Sound.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 function Sound() {
   const [isMuted, setIsMuted] = useState(false);

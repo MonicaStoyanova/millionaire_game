@@ -7,7 +7,7 @@ import Answers from "../../components/Answers/Answers";
 import Timer from "../../components/Timer/Timer";
 import Next from "../../components/Next/Next";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import Sound from "../../components/Sound";
+import Sound from "../../components/Sound/Sound";
 
 const PlayView = () => {
   const value = useContext(dataContext);
